@@ -3,7 +3,9 @@ import tensorflow as tf
 import numpy as np
 import IPython.display
 
-def get_model(style_layers, content_layer):
+#calling the pre-trained vgg19 model as per the research paper
+def get_model(style_layers, content_layer): 
+    
     vgg = tf.keras.applications.vgg19.VGG19(include_top=False, weights='imagenet')
     vgg.trainable = False #Pre trained
     style_outputs = [vgg.get_layer(name).output for name in style_layers]
@@ -13,7 +15,8 @@ def get_model(style_layers, content_layer):
 
 def content_loss(base_content, target):
     return tf.reduce_mean(tf.square(base_content - target))
-
+    
+#creating the gram matrix
 def gram_matrix(input_tensor):
     channels = int(input_tensor.shape[-1])
     a = tf.reshape(input_tensor, [-1, channels])
@@ -53,11 +56,12 @@ def compute_gradients(dic):
 
 def run_style_transfer(content_path,
                        style_path,
-                       num_iterations = 1000,
-                       content_weight = 3e2,
-                       style_weight = 2e-2):
+                       num_iterations = 1800,
+                       content_weight = .5e1,
+                       style_weight = 1e-2):
     
     model = get_model()
+                           
     for layer in model.layers:
         layer.trainable = False
 
@@ -67,7 +71,7 @@ def run_style_transfer(content_path,
     base_img = load_process_img(content_path)
     base_img = tf.Variable(base_img, dtype = tf.float32)
 
-    opt = tf.optimizers.Adam(learning_rate= 5, epsilon = 1e-2)
+    opt = tf.optimizers.Adam(learning_rate= 1e-1, epsilon = 1e-4)
 
     iter_count = 1
 
