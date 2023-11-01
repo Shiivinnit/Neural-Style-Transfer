@@ -1,3 +1,11 @@
+""" Neural Algorithm  
+This is the implementation of "A Neural Algorithm of Artistic Style" research paper proposed by Gatys et. al (2017).
+
+You can find the paper at https://doi.org/10.48550/arXiv.1508.06576
+
+This paper acts as a cornerstone in the usage of Artificial Intelligence in art, leveraging power of deep neural networks to create artistic images of high perceptual quality.
+
+"""
 
 import tensorflow as tf
 import numpy as np
