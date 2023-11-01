@@ -5,7 +5,7 @@ import IPython.display
 
 def get_model(style_layers, content_layer):
     vgg = tf.keras.applications.vgg19.VGG19(include_top=False, weights='imagenet')
-    vgg.trainable = False
+    vgg.trainable = False #Pre trained
     style_outputs = [vgg.get_layer(name).output for name in style_layers]
     content_output = [vgg.get_layer(name).output for name in content_layer]
     model_outputs = style_outputs + content_output
