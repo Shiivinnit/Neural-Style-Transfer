@@ -16,4 +16,17 @@ Neural Style Transfer (NST) leverages deep learning and neural networks to creat
 - https://www.tensorflow.org/tutorials/generative/style_transfer
 - https://www.tensorflow.org/api_docs/python/tf/keras/applications/vgg19/VGG19
 
+
+## Results:
+
+#### Valley X The Starry Night
+
+![image](https://github.com/Shiivinnit/Neural-Style-Transfer/assets/109523266/2e487d20-0913-49f0-a57d-aa0a2c343d2a)
+
+#### Mountain Peaks X Great Wave
+
+![image](https://github.com/Shiivinnit/Neural-Style-Transfer/assets/109523266/c3593b00-e5f6-4169-9dc5-2419a24a5aa6)
+
+
 ---
+
