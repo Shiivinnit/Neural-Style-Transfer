@@ -19,7 +19,7 @@ from process_visualise import load_image, imshow, load_process_img, invert_proce
 content_path = '/users/shivinnit/downloads/mona_lisa.jpeg' #provide with your content_path
 style_path = '/users/shivinnit/downloads/starry_night.jpeg' #provide with your style_path 
 
-output_dir = '/users/shivinnit/downloads/nst_output.jpeg' #provide the output directory
+output_dir = '/users/shivinnit/downloads/nst_output.jpeg' #provide with your output directory
 
 
 def main():
