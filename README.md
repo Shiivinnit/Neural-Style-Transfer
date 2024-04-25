@@ -4,7 +4,7 @@
 ## Description
 Neural Style Transfer (NST) leverages deep learning and neural networks to create a super-imposed image of the artistic style of one image and the content of another. This project implements Style Transfer using the VGG19 model, a pre-trained Convolutional Neural Network (CNN), to separate and recombine the content and style of images.
 
-## Dependencies: 
+## Dependencies (Libraries): Matplotlib, Numpy, PIL, Tensorflow
 
 ## Framework: TensorFlow
 
