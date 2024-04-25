@@ -11,8 +11,8 @@ from process_visualise import load_process_img, invert_process
 
 def get_model():
 
-    vgg = tf.keras.models.load_model('vgg19_saved_model') #the saved model doesn't have fully connected layers (include_top = False)
-    vgg.trainable = False #Pre-trained
+    vgg = tf.keras.applications.vgg19.VGG19(include_top = False, weights = 'imagenet') #removing fully connected layers or called 'top'
+    vgg.trainable = False #Pre trained
     
     #debugging
     first_layer = vgg.get_layer(index=0)
