@@ -6,11 +6,10 @@ mpl.rcParams['axes.grid'] = False
 
 import numpy as np
 from PIL import Image
-import time
-import functools
 import IPython.display
 
 import tensorflow as tf
+
 
 from custom_losses import content_loss, gram_matrix, style_loss, get_feature_representations, compute_loss, compute_gradients
 from nst import get_model, style_transfer
@@ -29,7 +28,7 @@ def main():
     best, best_loss = style_transfer(content_path= content_path, style_path= style_path)
     #visualise the result
     show_results(best, content_path, style_path)
-    #saving the output to the specified director (output_dir)
+    #saving the output to the specified directory (output_dir)
 
     final = Image.fromarray(best)
     final.save(output_dir)
